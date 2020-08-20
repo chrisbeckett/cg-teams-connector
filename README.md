@@ -22,4 +22,4 @@ Run **git clone https://github.com/chrisbeckett/dome9-teams-connector.git**
 
 Click the button below and follow the prompts. Easy peasy.
 
-<img src="https://aka.ms/deploytoazurebutton"/>
+[![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchrisbeckett%2Fdome9-teams-connector%2Fmaster%2Fdeployment-template.json)
