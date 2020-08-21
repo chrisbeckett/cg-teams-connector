@@ -36,5 +36,7 @@ Click the "Deploy to Azure" button and fill out the deployment form
 - Run **func azure functionapp publish *functname*** where the functname is your function name from the "**Deploy to Azure**" workflow
 - When this is complete, you will need the HTTP trigger URL (Function overview, "Get Function URL" button)
 - When you create the notification in CloudGuard, set the function trigger URL as the Endpoint URL in the "Send to HTTP Endpoint", click "Test" to make sure it is working 
+- Create/configure a Compliance Policy and add the HTTP Endpoint you defined earlier as the notification target
+- To test the integration, go into Compliance Policies, find the appopriate ruleset and click the "Send All Alerts" icon on the right hand side (up arrow icon), select Notification Type as Webhook and Notification as the Teams Connector Webhook URL from Azure Functions
 
 [![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchrisbeckett%2Fdome9-teams-connector%2Fmaster%2Fdeployment-template.json)
