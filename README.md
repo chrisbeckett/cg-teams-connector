@@ -6,6 +6,12 @@ This connector runs as an Azure Function and provides a webhook URL for CloudGua
 
 ![alt text](https://github.com/chrisbeckett/dome9-teams-connector/blob/master/teams-connector.png "Teams screenshot")
 
+## How does it work?
+
+CloudGuard runs regular compliance checks ("Continuous Compliance") and any *new* findings are sent as alerts to destinations determined by the compliance policy. In this case, you add a notification configuration and add the webhook URL of the Azure Function as the destination. This sends a JSON payload with the finding details and the Azure Function turns this information into a Teams card and sends it to Teams Webhook.
+
+
+
 
 ## What do I need to get started?
 
@@ -23,6 +29,12 @@ Run **git clone https://github.com/chrisbeckett/dome9-teams-connector.git**
 
 ## Deploying the Azure Function
 
-Click the button below and follow the prompts. Easy peasy.
+Click the "Deploy to Azure" button and fill out the deployment form
+- Both the **Azure Function** name and the **Storage Account** name **must be globally unique or deployment will fail (if a new storage account is created)**
+- Once the ARM template deployment is complete, open a command prompt and navigate to the **dome9-teams-connector** folder
+- Install the Azure Functions command line tools (*https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=windows%2Ccsharp%2Cbash*)
+- Run **func init**
+- Run **func azure functionapp publish *functname*** where the functname is your function name from the "**Deploy to Azure**" workflow
+- When this is complete, you will need the HTTP trigger URL
 
 [![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchrisbeckett%2Fdome9-teams-connector%2Fmaster%2Fdeployment-template.json)
