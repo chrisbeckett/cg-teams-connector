@@ -88,7 +88,7 @@ ipython_config.py
 #   having no cross-platform support, pipenv may install dependencies that don’t work, or not
 #   install all needed dependencies.
 #Pipfile.lock
-
+.gitignore
 # celery beat schedule file
 celerybeat-schedule
 
@@ -128,3 +128,7 @@ obj
 appsettings.json
 local.settings.json
 .python_packages
+.vscode
+Scripts
+pyenv.cfg
+.funcignore
