@@ -34,6 +34,7 @@ Click the "Deploy to Azure" button and fill out the deployment form
 - Install the Azure Functions command line tools (*https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=windows%2Ccsharp%2Cbash*)
 - Run **func init**
 - Run **func azure functionapp publish *functname*** where the functname is your function name from the "**Deploy to Azure**" workflow
-- When this is complete, you will need the HTTP trigger URL
+- When this is complete, you will need the HTTP trigger URL (Function overview, "Get Function URL" button)
+- When you create the notification in CloudGuard, set the function trigger URL as the Endpoint URL in the "Send to HTTP Endpoint", click "Test" to make sure it is working 
 
 [![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchrisbeckett%2Fdome9-teams-connector%2Fmaster%2Fdeployment-template.json)
