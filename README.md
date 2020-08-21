@@ -4,6 +4,9 @@
 
 This connector runs as an Azure Function and provides a webhook URL for CloudGuard (formerly Dome9) to send alerts to. This provides simple connectivity to Microsoft Teams as it sends alert information as cards into a Teams channel.
 
+![alt text](https://github.com/chrisbeckett/dome9-teams-connector/blob/master/teams-connector.png "Teams screenshot")
+
+
 ## What do I need to get started?
 
 * A CloudGuard tenant (duh)
