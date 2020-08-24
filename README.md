@@ -18,7 +18,8 @@ CloudGuard runs regular compliance checks ("Continuous Compliance") and any *new
 * An onboarded cloud account or two
 * Continuous Compliance configured
 * A Microsoft Teams account (double duh)
-* A teams channel to send alerts to
+* A Teams channel to send alerts to
+* A Teams webhook URL (https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook)
 * Python 3.7
 * Git
 
