@@ -10,7 +10,7 @@ This connector runs as an Azure Function and provides a webhook URL for CloudGua
 
 CloudGuard runs regular compliance checks ("Continuous Compliance") and any *new* findings are sent as alerts to destinations determined by the compliance policy. In this case, you add a notification configuration and add the webhook URL of the Azure Function as the destination. This sends a JSON payload with the finding details and the Azure Function turns this information into a Teams card and sends it to Teams Webhook.
 
-![alt text](https://github.com/chrisbeckett/dome9-teams-connector/blob/master/connector-architecture.png "Architecture overview")
+![alt text](https://github.com/chrisbeckett/dome9-teams-connector/blob/master/teams-connector-architecture.png "Architecture overview")
 
 ## What do I need to get started?
 
