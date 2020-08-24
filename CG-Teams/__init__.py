@@ -7,7 +7,7 @@ import dateutil.parser
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('CloudGuard Microsoft Teams Connector HTTP trigger function processed a request.')
-    logging.info('Code version : 20082020-1550 - fixed severity display header text in card')
+    logging.info('Code version : 24082020-1009 - fixed typo in alert ext in card')
     try:
         source_message = req.get_json()
         logging.info(f'Finding alert message content is - {source_message}')
@@ -43,7 +43,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             teams_message_section.addFact("Rule Name: ", rule_name)
             teams_message_section.addFact("Rule Description: ", rule_description)
             teams_message_section.addFact("Rule Severity: ", rule_severity)
-            teams_message_section.addFact("Finding ID / Date: ", finding_id + " - " + display_timestamp)
+            teams_message_section.addFact("Alert ID / Date: ", finding_id + " - " + display_timestamp)
             teams_message_section.addFact("Entity ID: ", entity_name)
             teams_message.addSection(teams_message_section)
             logging.info(f'Sending Teams message card...')
